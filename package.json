@@ -3,9 +3,9 @@
   "displayName": "SaLang",
   "publisher": "Serene1491",
   "description": "SaLang Highlight Extension",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "engines": {
-    "vscode": "^1.70.0"
+    "vscode": "^1.89.0"
   },
   "categories": ["Programming Languages"],
   "contributes": {
