@@ -1,0 +1,3 @@
+require('std') as std
+
+std.print('Hello, World!')

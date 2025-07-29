@@ -1,0 +1,93 @@
+{
+  "SaLang Variable Declaration": {
+    "prefix": "var",
+    "body": [
+      "var ${1:name} = ${2:0} -- ${3:comment}",
+      "$0"
+    ],
+    "description": "Declare a mutable variable"
+  },
+  "SaLang Local Table": {
+    "prefix": "localtable",
+    "body": [
+      "local ${1:tableName} = {",
+      "  $0",
+      "}"  
+    ],
+    "description": "Create a local table literal"
+  },
+  "SaLang Function Declaration": {
+    "prefix": "func",
+    "body": [
+      "function ${1:object?}.${2:name}(${3:args})",
+      "  $0",
+      "end"
+    ],
+    "description": "Define a method or function"
+  },
+  "SaLang Unsafe Function": {
+    "prefix": "unsafefunc",
+    "body": [
+      "unsafe function ${1:object?}.${2:name}(${3:args})",
+      "  $0",
+      "end"
+    ],
+    "description": "Define an unsafe function"
+  },
+  "SaLang If Statement": {
+    "prefix": "if",
+    "body": [
+      "if ${1:condition} then",
+      "  $0",
+      "end"
+    ],
+    "description": "Basic if/then block"
+  },
+  "SaLang If-Else Statement": {
+    "prefix": "ife",
+    "body": [
+      "if ${1:condition} then",
+      "  ${2:/* then */}",
+      "elseif ${3:condition} then",
+      "  ${4:/* elseif */}",
+      "else",
+      "  $0",
+      "end"
+    ],
+    "description": "If/elseif/else block"
+  },
+  "SaLang While Loop": {
+    "prefix": "while",
+    "body": [
+      "while ${1:condition} do",
+      "  $0",
+      "end"
+    ],
+    "description": "While loop"
+  },
+  "SaLang For-In Loop": {
+    "prefix": "forin",
+    "body": [
+      "for ${1:key} in ${2:collection} do",
+      "  $0",
+      "end"
+    ],
+    "description": "For-in loop over a collection"
+  },
+  "SaLang Require Statement": {
+    "prefix": "require",
+    "body": [
+      "require('${1:module}') as ${2:alias}",
+      "$0"
+    ],
+    "description": "Import a module"
+  },
+  "SaLang Concatenate String": {
+    "prefix": "concat",
+    "body": [
+      "${1:str1} .. ${2:str2}",
+      "$0"
+    ],
+    "description": "String concatenation"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "SaLang Programming Language",
+  "scopeName": "source.salang",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#variables" },
+    { "include": "#placeholders" },
+    { "include": "#keywords" },
+    { "include": "#types" },
+    { "include": "#operators" },
+    { "include": "#brackets" },
+    { "include": "#dot" },
+    { "include": "#properties" },
+    { "include": "#functions" },
+    { "include": "#identifiers" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        { "name": "comment.line.double-dash.salang", "match": "--[^\n]*" },
+        { 
+          "name": "comment.block.salang",
+          "begin": "--\\[\\[",
+          "end": "\\]\\]",
+          "patterns": [ { "name": "comment.block.contents.salang", "match": "." } ]
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        { "name": "keyword.control.salang", "match": "\\b(if|elseif|else|not|then|so|do|end|while|for|return|break|continue)\\b" },
+        { "name": "keyword.declaration.salang", "match": "\\b(var|local|function|unsafe|require|as|in)\\b" }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.single.salang",
+      "begin": "'",
+      "end": "'",
+      "patterns": [ { "name": "constant.character.escape.salang", "match": "\\\\." } ]
+    },
+    "types": {
+      "name": "support.type.salang",
+      "match": "\\b(true|false|nil|this)\\b"
+    },
+    "numbers": {
+      "name": "constant.numeric.salang",
+      "match": "\\b\\d+(\\.\\d+)?([eE][+-]?\\d+)?\\b"
+    },
+    "operators": {
+      "name": "keyword.operator.salang",
+      "match": "\\.\\.|->|::|>=|<=|==|~=|\\+\\+|\\-\\-|&&|\\|\\||[+\\-*/%#=!<>\\?\\\\@\\|&;:,~]"
+    },
+    "brackets": {
+      "name": "punctuation.bracket.salang",
+      "match": "[\\[\\](){}]"
+    },
+    "dot": {
+      "name": "punctuation.dot.salang",
+      "match": "\\.(?=\\s|$)"
+    },
+    "variables": {
+      "name": "variable.other.salang",
+      "match": "\\$\\{[a-zA-Z_]\\w*\\}"
+    },
+    "placeholders": {
+      "name": "constant.language.placeholder.salang",
+      "match": "&\\{[a-zA-Z_]\\w*\\}"
+    },
+    "properties": {
+      "patterns": [
+        { "name": "entity.name.property.salang", "match": "\\b[a-zA-Z_]\\w*(?=\\.)" }
+      ]
+    },
+    "functions": {
+      "name": "entity.name.function.salang",
+      "match": "\\b([a-zA-Z_]\\w*)\\s*(?=\\()"
+    },
+    "identifiers": {
+      "name": "variable.salang",
+      "match": "\\b[a-zA-Z_]\\w*\\b"
+    }
+  }
+}

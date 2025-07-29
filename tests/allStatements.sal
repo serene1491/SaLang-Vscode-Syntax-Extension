@@ -1,0 +1,84 @@
+require('std') as std
+
+-- Value Declarations:
+
+var number = 0 -- alterable
+0 as num       -- read-only
+
+-- Preset types: true, false, nil, this
+-- Operators: + - * / # ! % = == += -= ~= < > <= >= || && ? \ @ | & . , ; : ~ 
+-- no, 'not' isn't an operator
+
+-- Tables
+
+local t = {}
+local people = {
+    name = 'jonas'
+    age = 10
+}
+
+-- Functions
+
+function people.present()
+    std.print('Hello, my name is '..this.name)
+    std.print('I am'..toStr(this.name)..'y')
+end
+
+unsafe function people.cry() -- returns an (object? ok, object fail) encapsulating the return
+                             -- value and preventing errors.
+    std.throw('boys dont cry')
+end
+
+people.present()
+
+-- If statement
+
+if 0 then
+end
+
+if false then
+elseif true then
+end
+
+if 0 then
+elseif 0 then
+else so
+end
+
+if 0 then
+elseif 0 then
+not so
+end
+
+-- Simple form:
+
+0 then
+end
+
+0 then
+not so
+end
+
+0 then
+else so
+end
+
+-- While statement
+
+while 0 do
+end
+
+-- For in statement
+
+var table = {1, 3, 5}
+for i in table do
+    std.print(i)
+end
+
+-- Return, Break, Continue statement
+
+-- return -- (nothing to return)
+-- return false -- (with an return value)
+
+-- break
+-- continue

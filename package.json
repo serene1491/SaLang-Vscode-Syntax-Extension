@@ -1,0 +1,51 @@
+{
+  "name": "salang",
+  "displayName": "SaLang",
+  "publisher": "Serene1491",
+  "description": "SaLang Highlight Extension",
+  "version": "0.0.6",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "sal",
+        "aliases": ["SaLang", "sal", "salanguage"],
+        "extensions": [".sal"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "sal",
+        "scopeName": "source.salang",
+        "path": "./syntaxes/SaLang.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "sal",
+        "path": "./syntaxes/SaLang.snippets.json"
+      }
+    ],
+    "themes": [
+    {
+        "label": "SaLang Classic Dark Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/SaLang Classic Dark Theme.json"
+    },
+    {
+        "label": "SaLang Soft Contrast Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/SaLang Soft Contrast Theme.json"
+    },
+    {
+        "label": "SaLang Light Breeze Theme",
+        "uiTheme": "vs",
+        "path": "./themes/SaLang Light Breeze Theme.json"
+    }
+    ]
+  }
+}
